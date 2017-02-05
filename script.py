@@ -70,15 +70,16 @@ df = int_rate_to_num(df)
 # df = df.drop(["zip_code", "emp_length"], axis=1) #emp_length列を削除（n/aを含むので），関係なさそうな列を削除
 
 
-df = drop_nullattr(df, 0.5)
+# df = drop_nullattr(df, 0.5)
 # df = df.loc[:, ["id", "grade", "home_ownership", "sub_grade", "int_rate", "mort_acc",  "is_good_customer"]]
 
 #for B
-df_B = df.loc[:, ["id", "loan_amnt", "grade", "subgrade", "home_ownership", "verification_status", "initial_list_status", "int_rate", "bc_open_to_buy", "all_util", "percent_bc_gt_75", "mort_acc", "bc_util", "dti", "total_bc_limit", "term", "tot_hi_cred_lim", "total_rev_hi_lim", "installment", "avg_cur_bal", "tot_cur_bal"]]
+# df_B = df.loc[:, ["id", "loan_amnt", "grade", "sub_grade", "home_ownership", "verification_status", "initial_list_status", "int_rate", "bc_open_to_buy", "all_util", "percent_bc_gt_75", "mort_acc", "bc_util", "dti", "total_bc_limit", "term", "tot_hi_cred_lim", "total_rev_hi_lim", "installment", "avg_cur_bal", "tot_cur_bal", "is_good_customer"]]
 
 #for C
-df_C = df.loc[:, ["id", "loan_amnt", "emp_title", "emp_length", "annual_inc", "home_ownership"]]
+# df_C = df.loc[:, ["id", "loan_amnt", "emp_title", "emp_length", "annual_inc", "home_ownership", "is_good_customer"]]
 
 # print(len(df.columns))
-export_data(df_B, "miniB_all.csv")
-export_data(df_C, "miniC_all.csv")
+# export_data(df_B, "miniB_all.csv")
+# export_data(df_C, "miniC_all.csv")
+export_data(df, "test3_all.csv")
